@@ -1,0 +1,9 @@
+version: '2.0'
+services:
+  host:
+    image: 'nginx:alpine'
+    ports:
+      - '9090:80'
+    volumes:
+      - './data:/usr/share/nginx/html'
+      - './cors.conf:/etc/nginx/conf.d/cors.conf'
